@@ -1,20 +1,16 @@
 import express from 'express';
+import router from './routes/index.js';
 
 const app = express();
 
+//defie port
 const port = process.env.PORT || 4000;
 
-app.get('/', (req, res)  => {
-    res.send('Inicio');
-})
+//hability PUG
+app.set('view engine', 'pug');
 
-app.get('/about', (req, res)  => {
-    res.send('Nosotros');
-})
-
-app.get('/contact', (req, res)  => {
-    res.send('Contacto');
-})
+//add router
+app.use('/', router);
 
 app.listen(port, () => {
     console.log(`Server successfully in port ${port}`)
