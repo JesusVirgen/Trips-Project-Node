@@ -17,7 +17,7 @@ const tripsPage = async (req, res)  => {
 
     res.render('trips', {
         page : 'Próximos Viajes',
-        trips,
+        trips
     });
 }
 
@@ -27,9 +27,25 @@ const testimonialsPage = (req, res)  => {
     });
 }
 
+const tripsDetailPage = async (req, res)  => {
+    const { slug } = req.params
+
+    try {
+        const tripResult = await Trips.findOne({ where: { slug }})
+
+        res.render('trip', {
+            page: 'Información Viaje',
+            tripResult
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export {
     mainPage,
     aboutPage,
     tripsPage,
-    testimonialsPage
+    testimonialsPage,
+    tripsDetailPage
 }
