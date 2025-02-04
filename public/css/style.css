@@ -100,14 +100,14 @@ footer .nav a,
 }
 
 
-.descuento {
+.discount {
     height: 400px;
     background-image: linear-gradient( rgba(0, 0, 0, .5) 0%,  rgba(0, 0, 0, .5) 100%),  url(../img/cupon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 @media (min-width:768px) {
-    .descuento {
+    .discount {
         height: 400px;
         background-image:  linear-gradient(
             to right, 
@@ -118,21 +118,21 @@ footer .nav a,
         ), url(../img/cupon.jpg);
     }
 }
-.descuento .contenido {
+.discount .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 400px;
     color: white;
 }
-.descuento p {
+.discount p {
     font-family: 'Staatliches', cursive;
     line-height: .8;
 }
-.descuento .titulo {
+.discount .title {
     font-size: 2.4rem;
 }
-.descuento .precio {
+.discount .price {
     color: #15B9D5;
     font-size: 3rem;
 }
@@ -145,11 +145,11 @@ i {
     font-size: 2rem;
 }
 
-.testimoniales p{
+.testimonials p{
     font-size: .8rem;
     font-weight: normal;
 }
-.testimoniales p::before {
+.testimonials p::before {
     background-image: url(../img/quote.jpg);
     background-repeat: no-repeat;
     background-position: center center;

@@ -1,6 +1,32 @@
 extends ./layout/index
 
+block slider 
+    .slider 
+        h1 Rio de Janeiro 
+        em aventuras
+
 block content
     main.container.mt-5 
-        .row 
-            h1 #{page}
+        h2.text-center.mb-5  Sobre Nosotros
+        .row.mb-5
+            .col-md-6
+                p Los viajes son una experiencia enriquecedora que permite a las personas explorar nuevos lugares, culturas y tradiciones. A través de la movilidad geográfica, los viajeros tienen la oportunidad de ampliar sus horizontes, conocer diferentes modos de vida y disfrutar de la diversidad que el mundo ofrece. Además, los viajes pueden ser una forma de desconectar de la rutina diaria, proporcionando un espacio para la reflexión personal y el crecimiento emocional. La planificación de un viaje, desde la elección del destino hasta la organización de actividades, puede ser un proceso emocionante que despierta la curiosidad y la anticipación. En definitiva, los viajes no solo son una forma de entretenimiento, sino también una valiosa oportunidad para el aprendizaje y la conexión con el entorno global.
+                p Por otro lado, la planificación de un viaje implica considerar diversos factores, como el presupuesto, el medio de transporte y el alojamiento. La elección del destino puede depender de intereses personales, como la aventura, la relajación o la exploración histórica. Asimismo, es fundamental informarse sobre las costumbres y normas del lugar a visitar, ya que esto no solo enriquece la experiencia, sino que también muestra respeto hacia la cultura anfitriona. En resumen, los viajes no solo son una forma de ocio, sino también una oportunidad para el crecimiento personal y la comprensión intercultural.
+            .col-md-6 
+                img(src="/img/inicio_nosotros.jpg", alt=" imagen nostros", class="img-fluid")
+        
+        include ./layout/trip_layout
+    
+    .discount
+        .container
+            .row 
+                .col-md-6 
+                    .content 
+                        h3 5% de Descuento 
+                        p.title Viaje a Canada 
+                        p.fecha 20 de Marzo de 2025 - 28 de Marzo de 2025
+                        p.price $2,500 USD 
+
+    .container 
+        h2.mt-5.text-center Testimoniales
+            include ./layout/testimonials_layout

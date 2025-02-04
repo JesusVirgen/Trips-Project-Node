@@ -7,6 +7,10 @@ import {
     tripsDetailPage
 } from '../controllers/pagesController.js'
 
+import {
+    addtestimonial
+} from '../controllers/testimonialController.js';
+
 const router = express.Router();
 
 router.get('/', mainPage);
@@ -18,5 +22,6 @@ router.get('/trips', tripsPage);
 router.get('/trips/:slug', tripsDetailPage)
 
 router.get('/testimonials', testimonialsPage);
+router.post('/testimonials', addtestimonial);
 
 export default router;

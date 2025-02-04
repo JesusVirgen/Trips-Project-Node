@@ -22,6 +22,9 @@ app.use( (req, res, next) => {
     next();
 });
 
+//add body parser for read the form data
+app.use(express.urlencoded({extended: true}))
+
 app.use(express.static('public'));
 
 //add router
